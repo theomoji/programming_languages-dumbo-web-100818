@@ -15,9 +15,9 @@
 
 def reformat_languages(languages)
   new_hash = {}
-  languages.each do |style, info|   #style = oo & functional
+  languages.each do |style, info|   #style => oo & functional
     info.each do |language, type|
-      puts info
+    p  info[:style] = style
       # new_hash = new_hash.merge!(info)
         # new_hash = {:style => style}
       # new_hash.merge!(style)
@@ -25,3 +25,5 @@ def reformat_languages(languages)
   end
   # puts new_hash
 end
+
+https://github.com/theomoji/programming_languages-dumbo-web-100818/blob/solution/programming_languages.rb
