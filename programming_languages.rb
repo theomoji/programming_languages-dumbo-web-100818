@@ -17,10 +17,11 @@ def reformat_languages(languages)
   new_hash = {}
   languages.each do |style, info|   #style = oo & functional
     info.each do |language, type|
-      new_hash = new_hash.merge!(info)
+      puts info
+      # new_hash = new_hash.merge!(info)
         # new_hash = {:style => style}
       # new_hash.merge!(style)
     end
   end
-  puts new_hash
+  # puts new_hash
 end
