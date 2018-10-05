@@ -24,5 +24,3 @@ def reformat_languages(languages)
   end
   new_languages
 end
-
-#https://github.com/theomoji/programming_languages-dumbo-web-100818/blob/solution/programming_languages.rb
