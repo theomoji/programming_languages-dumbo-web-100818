@@ -10,20 +10,19 @@
 #     :style => [:oo]                   move style[0] into name
 #   },
 
-
+#
 
 
 def reformat_languages(languages)
-  new_hash = {}
-  languages.each do |style, info|   #style => oo & functional
-    info.each do |language, type|
-    p  info[:style] = style
-      # new_hash = new_hash.merge!(info)
-        # new_hash = {:style => style}
-      # new_hash.merge!(style)
+  new_languages = {}
+  languages.each do |type, hash|
+    hash.each do |name, attributes|
+      new_languages[name] ||= attributes
+      new_languages[name][:style] ||= []
+      new_languages[name][:style] << type
     end
   end
-  # puts new_hash
+  new_languages
 end
 
-https://github.com/theomoji/programming_languages-dumbo-web-100818/blob/solution/programming_languages.rb
+#https://github.com/theomoji/programming_languages-dumbo-web-100818/blob/solution/programming_languages.rb
